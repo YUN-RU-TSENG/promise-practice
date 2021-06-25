@@ -14,10 +14,10 @@
     <section class="promise">
       <button @click="getGroup2">請求 3 張圖片</button>
       <p>
-        group2 將會透過
+        group2 將會請求三張圖片（隨機會請求失敗、成功），透過
         <code>Promise.all</code>
-        請求三張圖片（隨機會請求失敗、成功），等所有請求完後一併顯示結果。（一旦有錯誤則返回被
-        <code>reject</code> 的 <code>promise</code>）
+        等所有請求完後一併顯示結果。（一旦有錯誤則返回被 <code>reject</code> 的
+        <code>promise</code>）
       </p>
       <div class="img-contain row">
         <template v-if="group2Load">
@@ -36,9 +36,8 @@
     <section class="promise">
       <button @click="getGroup3">請求 3 張圖片</button>
       <p>
-        group3 將會透過
-        <code>Promise.allsettled</code>
-        請求三張圖片（隨機會請求失敗、成功），等所有請求完後一併顯示結果
+        group3 將會請求三張圖片（隨機會請求失敗、成功），透過
+        <code>Promise.allsettled</code> 等所有請求完後一併顯示結果
       </p>
       <div class="img-contain row">
         <template v-if="group3Load">
@@ -57,9 +56,8 @@
     <section class="promise">
       <button @click="getGroup4">請求最快結果</button>
       <p>
-        group4 將會透過
-        <code>Promise.race</code> 請求三張圖片（隨機會請求失敗、成功）最快
-        <code>settled</code> 結果
+        group4 將會請求三張圖片（隨機會請求失敗、成功），透過
+        <code>Promise.race</code> 顯示最快 <code>settled</code> 結果
       </p>
       <div class="img-contain row">
         <template v-if="group4Load">
@@ -78,9 +76,8 @@
     <section class="promise">
       <button @click="getGroup5">請求最快圖片</button>
       <p>
-        group5 將會透過
-        <code>Promise.any</code> 請求三張圖片（隨機會請求失敗、成功）最快
-        <code>reslove</code> 結果
+        group5 將會請求三張圖片（隨機會請求失敗、成功，透過
+        <code>Promise.any</code> 顯示最快 <code>reslove</code> 結果
       </p>
       <div class="img-contain row">
         <template v-if="group5Load">
