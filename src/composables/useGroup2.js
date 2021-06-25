@@ -8,6 +8,7 @@ export default function () {
 
   const getGroup2 = async () => {
     group2Load.value = true
+
     try {
       const img = await Promise.all([
         getRandomImg(),

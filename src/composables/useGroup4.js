@@ -8,6 +8,7 @@ export default function () {
 
   const getGroup4 = async () => {
     group4Load.value = true
+
     try {
       const img = await Promise.race([
         getRandomImg(),
@@ -19,6 +20,7 @@ export default function () {
       group4.value = { img: [SvgError] }
       console.error(error)
     }
+
     group4Load.value = false
   }
 

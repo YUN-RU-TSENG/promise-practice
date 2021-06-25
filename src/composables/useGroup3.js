@@ -8,6 +8,7 @@ export default function () {
 
   const getGroup3 = async () => {
     group3Load.value = true
+
     const data = await Promise.allSettled([
       getRandomImg(),
       getRandomImg(),
@@ -17,6 +18,7 @@ export default function () {
     group3.value.img = data.map((item) => {
       return item.status === 'fulfilled' ? item.value : SvgError
     })
+
     group3Load.value = false
   }
 

@@ -106,12 +106,13 @@
   import useGroup3 from './composables/useGroup3'
   import useGroup4 from './composables/useGroup4'
   import useGroup5 from './composables/useGroup5'
+
   import SvgError from './assets/error.svg'
   import SvgLoad from './assets/load.svg'
 
   export default {
     setup() {
-      const { group1, group1Load, getGroup1 } = useGroup1()
+      const { group1, getGroup1 } = useGroup1()
       const { group2, group2Load, getGroup2 } = useGroup2()
       const { group3, group3Load, getGroup3 } = useGroup3()
       const { group4, group4Load, getGroup4 } = useGroup4()
@@ -123,22 +124,27 @@
 
       return {
         group1,
-        group1Load,
         getGroup1,
+
         group2,
         group2Load,
         getGroup2,
+
         group3,
         group3Load,
         getGroup3,
+
         group4,
         group4Load,
         getGroup4,
+
         group5,
         group5Load,
         getGroup5,
+
         SvgError,
         SvgLoad,
+
         backgroundStyle,
       }
     },

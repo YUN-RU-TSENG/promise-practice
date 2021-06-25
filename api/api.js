@@ -12,7 +12,7 @@ function getImg1() {
         resolve(
           'https://img.freepik.com/free-photo/seal-beach-dune-island-near-helgoland_475641-192.jpg?size=338&ext=jpg'
         ),
-      3000
+      2000
     )
   })
 }

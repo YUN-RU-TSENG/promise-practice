@@ -8,6 +8,7 @@ export default function () {
 
   const getGroup5 = async () => {
     group5Load.value = true
+
     try {
       const img = await Promise.any([
         getRandomImg(),
@@ -18,6 +19,7 @@ export default function () {
     } catch (error) {
       group5.value = { img: [SvgError] }
     }
+
     group5Load.value = false
   }
 
