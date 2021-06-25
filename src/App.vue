@@ -6,7 +6,8 @@
       <p>group1 將會請求三張圖片（隨機會請求失敗、成功），並各自呈現結果</p>
       <div class="img-contain row">
         <div v-for="(img, index) of group1.img" :key="index" class="col">
-          <div class="img" :style="backgroundStyle(img ?? SvgLoad)"></div>
+          <div v-if="img" class="img" :style="backgroundStyle(img)"></div>
+          <div v-else class="img" :style="backgroundStyle(SvgLoad)"></div>
         </div>
       </div>
     </section>
