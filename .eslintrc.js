@@ -10,5 +10,26 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['vue'],
-  rules: {},
+  rules: {
+    // vue attr order
+    'vue/attributes-order': [
+      'warn',
+      {
+        order: [
+          'DEFINITION',
+          'LIST_RENDERING',
+          'CONDITIONALS',
+          'RENDER_MODIFIERS',
+          'GLOBAL',
+          ['UNIQUE', 'SLOT'],
+          'TWO_WAY_BINDING',
+          'OTHER_DIRECTIVES',
+          'OTHER_ATTR',
+          'EVENTS',
+          'CONTENT',
+        ],
+        alphabetical: false,
+      },
+    ],
+  },
 }
